@@ -30,6 +30,14 @@ $ pip install --upgrade pip
 $ pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
 $ pip install -r requirement.txt
 ```
+Customized conda environment:
+```
+conda create -n yz_x2ct python=3.11
+conda activate yz_x2ct
+pip install --upgrade pip
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install ipython pandas pydicom PyYAML scikit-image scikit-learn SimpleITK tensorboard tqdm zipp omegaconf pytorch_lightning==1.6.5 wandb
+```
 
 ## Download
 ### Dataset
