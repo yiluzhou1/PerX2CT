@@ -2,3 +2,4 @@ checkpoints/
 val_test/
 __pycache__/
 data_preprocessing/lidc_idri/
+temp/

@@ -345,7 +345,8 @@ def main_test(args):
                 change_config_file_to_fixed_val(deepcopy(config)),
                 change_config_file_to_sorted(deepcopy(config), args.val_test)
             ]
-    prefixs = ['train', args.val_test, None]
+    # prefixs = ['train', args.val_test, None]
+    prefixs = [args.val_test]
     dataset_type = config['data']['params']['validation']['params']['test_images_list_file'].split("/")[-2]
 
     for prefix, cfg in zip(prefixs, configs):
@@ -389,3 +390,9 @@ if __name__ == "__main__":
     print()
     print(args.save_dir)
     main_test(args)
+    
+    """
+    python main_test.py --ckpt_path "checkpoints/PerX2CT.ckpt" --config_path "configs/PerX2CT.yaml" --save_dir "temp/" --val_test "val"
+
+    
+    """
